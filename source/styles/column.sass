@@ -1,0 +1,26 @@
+.column
+  margin-right: 10px
+  width: 107px
+  display: flex
+  flex-direction: column
+  &:last-child
+    margin-right: 0
+
+  &__name
+    display: inline-block
+    margin-bottom: 8px
+    padding: 0 12px
+    width: 107px
+    height: 26px
+    line-height: 26px
+    background-color: $textLink
+    color: #fff
+    transition: $transition
+
+    &:hover
+      background-color: $bgHoverBlue
+      color: #fff
+
+  &__link
+    padding: 0 12px
+    font-size: 13px

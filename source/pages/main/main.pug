@@ -1,0 +1,253 @@
+extends ../base
+block title
+  |Fontsly
+block main
+  div.categories-block
+    div.categories-block__wrap.container
+      div.categories-block__top
+        div.categories
+          div.column
+            a(href='#').column__name Fancy
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Comic
+            a(href='#').column__link Groovy
+            a(href='#').column__link Old School
+            a(href='#').column__link Curly
+            a(href='#').column__link Western
+            a(href='#').column__link Eroded
+            a(href='#').column__link Distorted
+            a(href='#').column__link Destroy
+            a(href='#').column__link Horror
+            a(href='#').column__link Fire, Ice
+            a(href='#').column__link Decorative
+          div.column
+            a(href='#').column__link Typewriter
+            a(href='#').column__link Stencil, Army
+            a(href='#').column__link Retro
+            a(href='#').column__link Initials
+            a(href='#').column__link Grid
+            a(href='#').column__link Various
+            a(href='#').column__name.mt-15 Techno
+            a(href='#').column__link Square
+            a(href='#').column__link LCD
+            a(href='#').column__link Sci-fi
+            a(href='#').column__link Various
+          div.column
+            a(href='#').column__name Foreign look
+            a(href='#').column__link Stencil, Army
+            a(href='#').column__link Retro
+            a(href='#').column__link Initials
+            a(href='#').column__link Grid
+            a(href='#').column__link Various
+            a(href='#').column__name.mt-15 Techno
+            a(href='#').column__link Pixel, Bitmap
+          div.column
+            a(href='#').column__name Gothic
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__name.mt-15 Basic
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+          div.column
+            a(href='#').column__name Script
+            a(href='#').column__link Stencil, Army
+            a(href='#').column__link Retro
+            a(href='#').column__link Initials
+            a(href='#').column__link Grid
+            a(href='#').column__link Various
+            a(href='#').column__link Various
+            a(href='#').column__link Various
+            a(href='#').column__link Various
+          div.column
+            a(href='#').column__name Dingbats
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+          div.column
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+          div.column
+            a(href='#').column__name Holiday
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+            a(href='#').column__link Cartoon
+
+      div.categories-block__bottom
+        ul.alphabet
+          each el in alphabet
+            li.alphabet__el
+              a.alphabet__link(href= el.link)= el.title
+  main.main.is-main
+    div.container
+      div.banner
+        a(href='#').banner__link
+          img(src=require('../../media/banner.png')).banner__img
+      div.filters
+        div.filters__top
+          div.filters__head
+            h1 All free fonts
+          div.filters__list
+            div.filter
+              span.filter__text Filter by:
+              span.filter__btn.is-active Recent
+              span.filter__btn Popular
+              span.filter__btn Featured
+        div.filters__bottom
+          form.filters__form(method='post', action='#')
+            div.preview-text
+              input.preview-text__input(type='text', placeholder='Type your text here')
+            div.select
+              select
+                option(value='xs') Tiny
+                option(value='s') Small
+                option(value='m' selected) Medium
+                option(value='l') Large
+            div.colorpicker
+              input.colorpicker__input(placeholder='HEX Color' type="text" pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$" id="hexcolor" size='7')
+              input.colorpicker__box(type="color" id="colorpicker" name="color" pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$" value="#000000")
+            div.filters__btn
+              input(type='submit' value='update').btn
+              input(type='reset' value='clear').btn
+            div.pagination
+              ul.pagination__list
+                li.pagination__el
+                  a.pagination__link(href='#', title='Previous page')
+                    span.icon.is-arrow-left
+                li.pagination__el.is-active
+                  a.pagination__link(href='#') 1
+                li.pagination__el
+                  a.pagination__link(href='#') 2
+                li.pagination__el
+                  a.pagination__link(href='#') 3
+                li.pagination__el
+                  a.pagination__link(href='#') 4
+                li.pagination__el
+                  a.pagination__link(href='#') ...
+                li.pagination__el
+                  a.pagination__link(href='#') 72
+                li.pagination__el
+                  a.pagination__link(href='#', title='Next page')
+                    span.icon.is-arrow-right
+            // end pagination
+      div.fonts
+        div.font
+          div.font__head
+            div.font-title
+              a(href='#').font-title__link Matilda
+              span by <a href='#' class='font-title__author'>Debut Studio</a>
+                a(href='#').font-title__arrow-link
+                  img(src=require('../../media/icon-link.png'))
+            div.font-script
+              span in <a href='#' class='font-script__link'>Script</a> <a href='#' class='font-script__link'>Calligraphy</a>
+          div.font__content
+            div.font-logo
+              a.font-logo__link(href='#')
+                img.font-logo__img(src=require('../../media/font.png'))
+            div.font-download
+              div.quatity
+                span.quatity__sum 139,773 downloads
+                span.quatity__text Public domain, GPL, OFL
+              div.font-download__btn
+                a(href='#').btn Download
+                a(href='#').btn.transparent Donate to author
+        div.font
+          div.font__head
+            div.font-title
+              a(href='#').font-title__link Brigest Script
+              span by <a href='#' class='font-title__author'>R Studio</a>
+            div.font-script
+              span in <a href='#' class='font-script__link'>Script</a> <a href='#' class='font-script__link'>Calligraphy</a>
+          div.font__content
+            div.font-logo
+              a.font-logo__link(href='#')
+                img.font-logo__img(src=require('../../media/font2.png'))
+            div.font-download
+              div.quatity
+                span.quatity__sum 1,123 downloads
+                span.quatity__text Demo
+              div.font-download__btn
+                a(href='#').btn Download
+                btn.btn.transparent Donate to author
+        div.font
+          div.font__head
+            div.font-title
+              a(href='#').font-title__link Kodinah Diary
+              span by <a href='#' class='font-title__author'>Debut Studio</a>
+                a(href='#').font-title__arrow-link
+                  img(src=require('../../media/icon-link.png'))
+            div.font-script
+              span in <a href='#' class='font-script__link'>Script</a> <a href='#' class='font-script__link'>Calligraphy</a>
+          div.font__content
+            div.font-logo
+              a.font-logo__link(href='#')
+                img.font-logo__img(src=require('../../media/font3.png'))
+            div.font-download
+              div.quatity
+                span.quatity__sum 17,585 downloads
+                span.quatity__text Free for Personal Use
+              div.font-download__btn
+                a(href='#').btn Download
+                btn.btn.transparent Donate to author
+        div.font
+          div.font__head
+            div.font-title
+              a(href='#').font-title__link Perfect Sweet
+              span by <a href='#' class='font-title__author'>R Studio</a>
+            div.font-script
+              span in <a href='#' class='font-script__link'>Script</a> <a href='#' class='font-script__link'>Calligraphy</a>
+          div.font__content
+            div.font-logo
+              a.font-logo__link(href='#')
+                img.font-logo__img(src=require('../../media/font4.png'))
+            div.font-download
+              div.quatity
+                span.quatity__sum 1,123 downloads
+                span.quatity__text Demo
+              div.font-download__btn
+                a(href='#').btn Download
+                btn.btn.transparent Donate to author
+        div.fonts__pagination
+          div.pages
+            span Page <span>2</span> of 72
+          div.pagination
+            ul.pagination__list
+              li.pagination__el
+                a.pagination__link(href='#', title='Previous page')
+                  span.icon.is-arrow-left
+              li.pagination__el
+                a.pagination__link(href='#') 1
+              li.pagination__el.is-active
+                a.pagination__link(href='#') 2
+              li.pagination__el
+                a.pagination__link(href='#') 3
+              li.pagination__el
+                a.pagination__link(href='#') 4
+              li.pagination__el
+                a.pagination__link(href='#') ...
+              li.pagination__el
+                a.pagination__link(href='#') 72
+              li.pagination__el
+                a.pagination__link(href='#', title='Next page')
+                  span.icon.is-arrow-right
+          // end pagination

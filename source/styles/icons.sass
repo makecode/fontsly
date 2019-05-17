@@ -1,0 +1,77 @@
+.icon
+  display: inline-block
+  vertical-align: middle
+
+  &.is-fb
+    width: 30px
+    height: 30px
+    background: url('../media/facebook-standart.svg')
+
+    &:hover
+      width: 30px
+      height: 30px
+      background: url('../media/facebook-hover.svg')
+    
+  &.is-pn
+    width: 30px
+    height: 30px
+    background: url('../media/pinterest-standart.svg')
+
+    &:hover
+      width: 30px
+      height: 30px
+      background: url('../media/pinterest-hover.svg')
+    
+  &.is-be
+    width: 30px
+    height: 30px
+    background: url('../media/behance-standart.svg')
+
+    &:hover
+      width: 30px
+      height: 30px
+      background: url('../media/behance-hover.svg')
+
+  &.icon-search
+    margin: 0 3px 3px 0
+    border: 2px solid
+    border-radius: 50%
+    transition: $transition
+    width: 14px
+    height: 14px
+    border-color: #272727
+
+    &::after
+      position: absolute
+      content: ''
+      right: 0
+      bottom: 2px
+      width: 7px
+      height: 2px
+      background-color: #272727
+      transform: rotate(45deg)
+      transition: $transition
+
+  &.is-arrow-right
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 5px 0 5px 8px
+    border-color: transparent transparent transparent $text
+
+  &.is-arrow-left
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 5px 8px 5px 0
+    border-color: transparent $text transparent transparent
+
+  &.is-arrow-prev
+    width: 15px
+    height: 10px
+    background: url('../media/icon-arrow-prev.png')
+
+  &.is-arrow-next
+    width: 15px
+    height: 10px
+    background: url('../media/icon-arrow-next.png')

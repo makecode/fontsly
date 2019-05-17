@@ -1,0 +1,22 @@
+.nav-footer
+  display: flex
+  color: $textGrey
+
+  &__el
+    padding-right: 23px
+    position: relative
+    &:after
+      position: absolute
+      content: ''
+      top: 2px
+      right: 10px
+      width: 1px
+      height: 14px
+      background-color: $textGrey
+
+    &:last-child
+      &:after
+        display: none
+
+  &__link
+    color: $textGrey

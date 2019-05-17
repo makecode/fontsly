@@ -1,0 +1,89 @@
+$language-el-border-color: #E3E3E3
+$language-el-color: #434A4C
+$language-el-bg-color: #FFFFFF
+
+$language-link-color: #434A4C
+$language-link-hovered-color: #FFFFFF
+
+
+.language-wrap
+  margin-left: 16px
+  position: relative
+  width: 60px
+  height: 36px
+  cursor: pointer
+
+.language
+  position: absolute
+  top: 0
+  right: 0
+  display: inline-flex
+  flex-direction: column
+  width: 60px
+  height: 35px
+  line-height: 35px
+  overflow: hidden
+  z-index: 10
+
+  &.is-open
+    height: auto
+
+  &__el
+    border: 1px solid $language-el-border-color
+    color: $language-el-color
+    padding-left: 10px
+    display: flex
+    flex: 1
+    background-color: $language-el-bg-color
+    order: 2
+    min-height: 35px
+    transition: $transition
+    border-top: none
+    border-bottom: none
+
+    &:first-child
+      border-top: 1px solid $language-el-border-color
+
+    &:last-child
+      border-bottom: 1px solid $language-el-border-color
+
+    &:hover
+      background-color: $textLink
+
+      .language__link
+        color: $language-link-hovered-color
+
+    &.is-active
+      order: 1
+      border: 1px solid #FFFFFF
+      background-color: transparent
+
+      &:hover
+        background-color: transparent
+
+      .language__link
+        color: $language-link-hovered-color
+
+  &__link
+    color: $language-link-color
+
+    &:hover
+      color: $language-link-hovered-color
+      text-decoration: none
+
+  &__ico
+    position: absolute
+    top: 18px
+    right: 0
+    z-index: 11
+    &::after
+      position: absolute
+      content: ''
+      width: 0
+      height: 0
+      top: 50%
+      right: 8px
+      transform: translateY(-50%)
+      border-style: solid
+      border-width: 5px 5px 0 5px
+      border-color: white transparent transparent transparent

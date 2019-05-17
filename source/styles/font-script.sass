@@ -1,0 +1,28 @@
+.font-script
+
+  &__link
+    position: relative
+    padding-right: 27px
+    font-size: 13px
+    &:last-child
+      padding-right: 0
+      &:after,
+      &:before
+        display: none
+
+    &:after,
+    &:before
+      position: absolute
+      content: ''
+      right: 9px
+      width: 1px
+      height: 6px
+      background-color: $text
+
+    &:after
+      top: 4px
+      transform: rotate(-45deg)
+
+    &:before
+      bottom: 4px
+      transform: rotate(45deg)

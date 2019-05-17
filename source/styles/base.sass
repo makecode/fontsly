@@ -1,0 +1,105 @@
+html
+  height: 100%
+  width: 100%
+
+body
+  display: flex
+  flex-direction: column
+  font-size: 14px
+  color: $text
+  letter-spacing: -0.1px
+  box-sizing: border-box
+  font-family: $f-opensans-regular
+
+h1
+  font-size: 26px
+  font-family: $f-opensans-regular
+
+h2
+  font-size: 18px
+  font-family: $f-opensans-semibold
+
+ul
+  list-style: none
+
+ul,
+li
+  margin: 0
+  padding: 0
+
+img
+  display: inline-block
+  max-width: 100%
+
+a
+  text-decoration: none
+  color: $text
+  cursor: pointer
+
+  &:hover
+    color: $textLink
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus
+  outline: none
+
+input[type='text'],
+input[type='search'],
+input[type='button']
+  -moz-appearance: none
+  -webkit-appearance: none
+
+.atom
+  margin: 20px
+  padding: 30px
+  width: 720px
+  border: 1px solid #ccc
+
+.logo
+
+  &__img
+    width: 120px
+
+.preview-text
+  margin-right: 10px
+
+  &__input
+    padding: 0 10px
+    width: 200px
+    height: 32px
+    line-height: 32px
+    border: 1px solid $borderGrey
+
+.banner
+  margin-bottom: 20px
+
+.font-style
+
+  &__name
+    display: inline-block
+    padding: 0 5px
+    height: 18px
+    line-height: 18px
+    font-size: 12px
+    background-color: $borderGrey
+
+.copyright
+  margin-right: 10px
+
+.title-head
+  margin-bottom: 10px
+  padding-bottom: 10px
+  border-bottom: 1px solid $borderGrey
+
+.categories
+  display: flex
+
+.raiting
+  margin-left: 17px
+  position: relative
+  top: 4px
+
+.mt-15
+  margin-top: 15px

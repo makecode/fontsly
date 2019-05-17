@@ -1,0 +1,64 @@
+.radio
+
+  &__title
+    display: inline-block
+    margin-bottom: 10px
+    font-size: 15px
+    font-family: $f-opensans-semibold
+
+  &__item
+    margin-bottom: 5px
+    display: flex
+    align-items: center
+
+  input
+
+    &:checked, &:not(:checked)
+      position: absolute
+      left: -9999px
+    &:checked + span, &:not(:checked) + span
+      display: inline-block
+      position: relative
+      padding-left: 25px
+      font-size: 13px
+      color: $text
+      cursor: pointer
+    &:checked + span:before, &:not(:checked) + span:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 18px
+      height: 18px
+      border: 1px solid #b4b4b4
+      border-radius: 100%
+      background: #fff
+    &:checked + span:after
+      content: ''
+      width: 8px
+      height: 8px
+      background: $textLink
+      position: absolute
+      top: 5px
+      left: 5px
+      border-radius: 100%
+      -webkit-transition: all 0.2s ease
+      transition: all 0.2s ease
+    &:not(:checked) + span:after
+      content: ''
+      width: 8px
+      height: 8px
+      background: $textLink
+      position: absolute
+      top: 5px
+      left: 5px
+      border-radius: 100%
+      -webkit-transition: all 0.2s ease
+      transition: all 0.2s ease
+      opacity: 0
+      -webkit-transform: scale(0)
+      transform: scale(0)
+    &:checked + span:after
+      opacity: 1
+      -webkit-transform: scale(1)
+      transform: scale(1)

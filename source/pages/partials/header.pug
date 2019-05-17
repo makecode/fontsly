@@ -1,0 +1,38 @@
+-
+  const navHeader = [
+    { title: 'Recent Fonts', link: '#' },
+    { title: 'Top Fonts', link: '#' },
+    { title: 'Designers', link: '#' },
+    { title: 'Submit a font', link: '#' }
+  ]
+
+header.header#header
+  div.container
+    div.header__wrap
+      div.header__left
+        div.logo#logo
+          a.logo__link(href='main.html')
+            img.logo__img.logo__dark(src=require('./../../media/logo.svg'))
+      div.header__center
+        nav.navigation
+          each el in navHeader
+            a.navigation__link(href= el.link)= el.title
+      div.header__right
+        div.search
+          form#header-search-form.search__form(action='#')
+            input#header-search-input.search__input(type='text', placeholder='Search')
+            button.search__btn(type='submit')
+              span.icon.icon-search
+        div.language-wrap
+          ul.language
+            li.language__el.is-active(data-lang='en')
+              a.language__link(href='#') En
+              span.language__ico.icon.is-arrow
+            li.language__el(data-lang='de')
+              a.language__link(href='#') De
+            li.language__el(data-lang='fr')
+              a.language__link(href='#') Fr
+            li.language__el(data-lang='it')
+              a.language__link(href='#') It
+            li.language__el(data-lang='es')
+              a.language__link(href='#') Es

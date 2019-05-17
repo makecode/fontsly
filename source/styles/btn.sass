@@ -1,0 +1,45 @@
+.btn
+  display: inline-block
+  text-align: center
+  white-space: nowrap
+  width: 136px
+  height: 38px
+  line-height: 38px
+  font-size: 15px
+  font-family: $f-opensans-semibold
+  transition: $transition
+  color: #fff
+  background-color: $textLink
+  cursor: pointer
+
+  &:hover
+    background-color: $bgHoverBlue
+    color: #fff
+
+  &.transparent
+    height: 30px
+    line-height: 30px
+    color: $text
+    background-color: #fff
+    border: 1px solid $borderGrey
+
+  &.large
+    background-color: $textLink
+    color: white
+    width: 100%
+    height: 44px
+    line-height: 44px
+    border-radius: 22px
+    font-family: $f-opensans-semibold
+    font-size: 15px
+    transition: $transition
+
+    &:hover
+      background-color: #348ff3
+
+  &.small
+    width: 110px
+    height: 32px
+    line-height: 32px
+    font-size: 14px
+    font-family: $f-opensans-regular

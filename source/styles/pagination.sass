@@ -1,0 +1,41 @@
+.pagination
+  text-align: center
+
+  &__list
+    display: inline-flex
+
+  &__el
+    margin: 0 2px
+
+    &.is-active
+      border: 1px solid $textLink
+      a
+        color: $textLink
+
+    &:hover
+      a
+        color: $textLink
+
+      .icon
+        &.is-arrow-right
+          border-color: transparent transparent transparent $bgHoverBlue
+        &.is-arrow-left
+          border-color: transparent $bgHoverBlue transparent transparent
+
+      span
+        &:after,
+        &:before
+          background-color: #fff
+
+  &__link
+    position: relative
+    display: flex
+    align-items: center
+    padding: 0 11px
+    margin: 0
+    height: 32px
+    line-height: 32px
+    color: $text
+    border: 1px solid transparent
+    cursor: pointer
+    box-sizing: border-box
