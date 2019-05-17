@@ -32,8 +32,9 @@
     "serv": "static build",
     "clean": "rm -rf build"
   },
-  "author": "Anton Chupak",
+  "author": "Makecode",
   "dependencies": {
+    "@claviska/jquery-minicolors": "^2.3.4",
     "copy-webpack-plugin": "^4.5.1",
     "extract-text-webpack-plugin": "3.0.2",
     "jquery": "^3.3.1",

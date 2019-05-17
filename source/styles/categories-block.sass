@@ -3,18 +3,21 @@
   background: url('../media/backgr-head-category.png') bottom center no-repeat
 
   &__wrap
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    min-height: 370px
     padding-top: 20px
     padding-bottom: 10px
     background-color: #fff
+    box-sizing: border-box
 
   &__top
     padding: 0 20px
     display: flex
     flex-direction: column
     flex-wrap: wrap
-    padding-bottom: 30px
-    //height: 300px
-    border-bottom: 1px solid $borderGrey
 
   &__bottom
     padding: 10px 20px 0 20px
+    border-top: 1px solid $borderGrey
