@@ -1,6 +1,6 @@
 Structure
 =============
-Simple pages for Boolberry
+Simple pages for Fontsly
 
 `/source/` - thats where you write code.
 
