@@ -12,8 +12,12 @@ $(document).ready(function() {
   const $languageEl = $('.language__el'),
         $language = $('.language'),
         $filter = $('.filter__btn'),
+        $filterContent = $('.fonts__content'),
         $uploadFile = $('#input-file'),
         $uploadFont = $('#input-font'),
+        $inputRadio = $('input:radio[name=radio-one]'),
+        $radioFormYes = $('.radio-form-yes'),
+        $radioFormNo = $('.radio-form-no'),
         $uploadIllustration = $('#input-illustration');
 
   //Language
@@ -27,9 +31,30 @@ $(document).ready(function() {
   });
 
   //filters
-  $filter.click(function() {
-    $filter.removeClass('is-active');
-    $(this).toggleClass('is-active');
+  $filter.map((index, filter) => {
+    $(filter).click(() => {
+      $filter.removeClass('is-active');
+      $(filter).addClass('is-active');
+
+      $filterContent.map((indexContent, content) => {
+        if (indexContent === index) {
+          $($filterContent).removeClass('is-active');
+          $(content).addClass('is-active');
+        }
+      })
+    });
+  });
+
+  $inputRadio.change(function () {
+    const val = $(this).attr('value');
+
+    if (val === 'yes') {
+      $($radioFormNo).hide();
+      $($radioFormYes).show();
+    } else {
+      $($radioFormYes).hide();
+      $($radioFormNo).show();
+    }
   });
 
   //input file
@@ -37,19 +62,10 @@ $(document).ready(function() {
   $uploadFont.change(changeInputFile);
   $uploadIllustration.change(changeInputFile);
 
-
   // color picker
   $('INPUT.minicolors').minicolors({
     defaultValue: '#000000'
   });
-
-
-  // $('#colorpicker').on('change', function() {
-  //   $('#hexcolor').val(this.value);
-  // });
-  // $('#hexcolor').on('change', function() {
-  //   $('#colorpicker').val(this.value);
-  // });
 
   function changeInputFile(){
     const $label = $(this).parent().find('span');

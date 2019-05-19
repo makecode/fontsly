@@ -9,6 +9,7 @@
     justify-content: space-between
 
   &__content
+    position: relative
     padding: 6px 15px 6px 12px
     height: 126px
     display: flex
@@ -16,3 +17,15 @@
     align-items: center
     border: 1px solid $borderGrey
     border-top: none
+
+    .font-logo
+      width: 100%
+
+      &__link
+        display: block
+
+    .font-download
+      position: absolute
+      top: 6px
+      right: 15px
+      z-index: 5

@@ -15,71 +15,13 @@ block main
           span.radio__title Are you the author of the font?
           div.radio__item
             label
-              input(type='radio' name='radio' checked=)
+              input(type='radio' name='radio-one' value='yes' checked)
               span Yes, I created it myself.
           div.radio__item
             label
-              input(type='radio' name='radio')
+              input(type='radio' name='radio-one' value='no')
               span No, I found it somewhere.
-        textarea.textarea By submitting this form you certify that you are the author of the font, that it is not someone else's design, and that you have the publishing rights on it. You allow dafont.com to propose it for download, and you are aware that once online every visitor can freely download it, but fontsly.com does not control the issues people do with the font. Dafont.com declines any responsibility in case of non-respect by the users of the terms mentionned in the text files.
-        div.request
-          p.request__descr All fields are optional except the file field. Please be sure to keep the readme text files in the zip.
-          form.request__form
-            div.request__item
-              label.request__label Font Name:
-              input.request__input(type='text')
-            div.request__item
-              label.request__label Font Designer:
-              input.request__input(type='text')
-            div.request__item
-              label.request__label Designer Email Address:
-              input.request__input(type='email')
-            div.request__item
-              label.request__label Website Url:
-              input.request__input(type='text')
-              span.request__tip optional
-            div.request__item
-              label.request__label File (.ttf or .zip):
-              div.request__download
-                label
-                  span Choose File
-                  input(type='file' id='input-font')
-                span.request__file-selected no file selected
-            div.request__item
-              label.request__label Recommended theme:
-              div.select.is-large
-                select
-                  option(value='Theme 1') Theme 1
-                  option(value='Theme 2') Theme 2
-                  option(value='Theme 3') Theme 3
-            div.request__item
-              label.request__label License:
-              div.select.is-large
-                select
-                  option(value='')
-                    option(value='')
-                    option(value='')
-            div.request__item
-              label.request__label Paypal for Donation:
-              input.request__input(type='text')
-              span.request__tip optional
-            div.request__item
-              label.request__label Commercial License Url:
-              input.request__input(type='text')
-              span.request__tip optional
-            div.request__item
-              label.request__label Note of the author:
-              textarea.textarea.small
-            div.request__item
-              label.request__label Illustration:
-              div.request__download
-                label
-                  span Choose File
-                  input(type='file' id='input-illustration')
-                span.request__file-selected no file selected
-              span.request__tip very optional - max width:800px
-            div.request__text
-              p If possible in PNG (<a href='#'>why PNG?</a>) and not JPG.
-              p Graphics with solid backgrounds saved in JPG will be rejected. JPGs converted in PNG will be rejected as well, you must export to PNG the original, undamaged file.
-          div.request__btn
-            button(type='submit').btn.small Submit
+
+        div.input-form-content
+          include ../partials/form-yes
+          include ../partials/form-no
