@@ -53,92 +53,138 @@
           <div class="radio"><span class="radio__title">Are you the author of the font?</span>
             <div class="radio__item">
               <label>
-                <input type="radio" name="radio" checked><span>Yes, I created it myself.</span>
+                <input type="radio" name="radio-one" value="yes" checked><span>Yes, I created it myself.</span>
               </label>
             </div>
             <div class="radio__item">
               <label>
-                <input type="radio" name="radio"><span>No, I found it somewhere.</span>
+                <input type="radio" name="radio-one" value="no"><span>No, I found it somewhere.</span>
               </label>
             </div>
           </div>
-          <textarea class="textarea">By submitting this form you certify that you are the author of the font, that it is not someone else's design, and that you have the publishing rights on it. You allow dafont.com to propose it for download, and you are aware that once online every visitor can freely download it, but fontsly.com does not control the issues people do with the font. Dafont.com declines any responsibility in case of non-respect by the users of the terms mentionned in the text files.</textarea>
-          <div class="request">
-            <p class="request__descr">All fields are optional except the file field. Please be sure to keep the readme text files in the zip.</p>
-            <form class="request__form">
-              <div class="request__item">
-                <label class="request__label">Font Name:</label>
-                <input class="request__input" type="text">
-              </div>
-              <div class="request__item">
-                <label class="request__label">Font Designer:</label>
-                <input class="request__input" type="text">
-              </div>
-              <div class="request__item">
-                <label class="request__label">Designer Email Address:</label>
-                <input class="request__input" type="email">
-              </div>
-              <div class="request__item">
-                <label class="request__label">Website Url:</label>
-                <input class="request__input" type="text"><span class="request__tip">optional</span>
-              </div>
-              <div class="request__item">
-                <label class="request__label">File (.ttf or .zip):</label>
-                <div class="request__download">
-                  <label><span>Choose File</span>
-                    <input type="file" id="input-font">
-                  </label><span class="request__file-selected">no file selected</span>
-                </div>
-              </div>
-              <div class="request__item">
-                <label class="request__label">Recommended theme:</label>
-                <div class="select is-large">
-                  <select>
-                    <option value="Theme 1">Theme 1</option>
-                    <option value="Theme 2">Theme 2</option>
-                    <option value="Theme 3">Theme 3</option>
-                  </select>
-                </div>
-              </div>
-              <div class="request__item">
-                <label class="request__label">License:</label>
-                <div class="select is-large">
-                  <select>
-                    <option value="">
-                      <option value=""></option>
-                      <option value=""></option>
-                    </option>
-                  </select>
-                </div>
-              </div>
-              <div class="request__item">
-                <label class="request__label">Paypal for Donation:</label>
-                <input class="request__input" type="text"><span class="request__tip">optional</span>
-              </div>
-              <div class="request__item">
-                <label class="request__label">Commercial License Url:</label>
-                <input class="request__input" type="text"><span class="request__tip">optional</span>
-              </div>
-              <div class="request__item">
-                <label class="request__label">Note of the author:</label>
-                <textarea class="textarea small"></textarea>
-              </div>
-              <div class="request__item">
-                <label class="request__label">Illustration:</label>
-                <div class="request__download">
-                  <label><span>Choose File</span>
-                    <input type="file" id="input-illustration">
-                  </label><span class="request__file-selected">no file selected</span>
-                </div><span class="request__tip">very optional - max width:800px</span>
-              </div>
-              <div class="request__text">
-                <p>If possible in PNG (<a href='#'>why PNG?</a>) and not JPG.</p>
-                <p>Graphics with solid backgrounds saved in JPG will be rejected. JPGs converted in PNG will be rejected as well, you must export to PNG the original, undamaged file.</p>
-              </div>
-            </form>
-            <div class="request__btn">
-              <button class="btn small" type="submit">Submit</button>
-            </div>
+          <div class="input-form-content">
+<div class="radio__form radio-form-yes">
+  <textarea class="textarea">By submitting this form you certify that you are the author of the font, that it is not someone else's design, and that you have the publishing rights on it. You allow dafont.com to propose it for download, and you are aware that once online every visitor can freely download it, but fontsly.com does not control the issues people do with the font. Dafont.com declines any responsibility in case of non-respect by the users of the terms mentionned in the text files.</textarea>
+  <div class="request">
+    <p class="request__descr">All fields are optional except the file field. Please be sure to keep the readme text files in the zip.</p>
+    <form class="request__form">
+      <div class="request__item">
+        <label class="request__label">Font Name:</label>
+        <input class="request__input" type="text">
+      </div>
+      <div class="request__item">
+        <label class="request__label">Font Designer:</label>
+        <input class="request__input" type="text">
+      </div>
+      <div class="request__item">
+        <label class="request__label">Designer Email Address:</label>
+        <input class="request__input" type="email">
+      </div>
+      <div class="request__item">
+        <label class="request__label">Website Url:</label>
+        <input class="request__input" type="text"><span class="request__tip">optional</span>
+      </div>
+      <div class="request__item">
+        <label class="request__label">File (.ttf or .zip):</label>
+        <div class="request__download">
+          <label><span>Choose File</span>
+            <input type="file" id="input-font">
+          </label><span class="request__file-selected">no file selected</span>
+        </div>
+      </div>
+      <div class="request__item">
+        <label class="request__label">Recommended theme:</label>
+        <div class="select is-large">
+          <select>
+            <option value="Theme 1">Theme 1</option>
+            <option value="Theme 2">Theme 2</option>
+            <option value="Theme 3">Theme 3</option>
+          </select>
+        </div>
+      </div>
+      <div class="request__item">
+        <label class="request__label">License:</label>
+        <div class="select is-large">
+          <select>
+            <option value="">
+              <option value=""></option>
+              <option value=""></option>
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="request__item">
+        <label class="request__label">Paypal for Donation:</label>
+        <input class="request__input" type="text"><span class="request__tip">optional</span>
+      </div>
+      <div class="request__item">
+        <label class="request__label">Commercial License Url:</label>
+        <input class="request__input" type="text"><span class="request__tip">optional</span>
+      </div>
+      <div class="request__item">
+        <label class="request__label">Note of the author:</label>
+        <textarea class="textarea small"></textarea>
+      </div>
+      <div class="request__item">
+        <label class="request__label">Illustration:</label>
+        <div class="request__download">
+          <label><span>Choose File</span>
+            <input type="file" id="input-illustration">
+          </label><span class="request__file-selected">no file selected</span>
+        </div><span class="request__tip">very optional - max width:800px</span>
+      </div>
+      <div class="request__text">
+        <p>If possible in PNG (<a href='#'>why PNG?</a>) and not JPG.</p>
+        <p>Graphics with solid backgrounds saved in JPG will be rejected. JPGs converted in PNG will be rejected as well, you must export to PNG the original, undamaged file.</p>
+      </div>
+    </form>
+    <div class="request__btn">
+      <button class="btn small" type="submit">Submit</button>
+    </div>
+  </div>
+</div>
+<div class="radio__form radio-form-no">
+  <div class="request">
+    <div class="request__search"><span class="request__title">First, verify that the font doesn't exist on fontsly:</span>
+      <div class="search with-100">
+        <form class="search__form" action="#">
+          <input class="search__input" type="text" placeholder="Search">
+          <button class="search__btn" type="submit"><span class="icon icon-search"></span></button>
+        </form>
+      </div>
+    </div>
+    <p class="request__descr">All fields are optional except the file field. Please be sure to keep the readme text files in the zip.</p>
+    <form class="request__form">
+      <div class="request__item">
+        <label class="request__label">How did you get this font?</label>
+        <textarea class="textarea small"></textarea>
+      </div>
+      <div class="request__item">
+        <label class="request__label">Name of the author:</label>
+        <input class="request__input" type="text">
+      </div>
+      <div class="request__item">
+        <label class="request__label">Email of the author:</label>
+        <input class="request__input" type="email">
+      </div>
+      <div class="request__item">
+        <label class="request__label">Site of the author:</label>
+        <input class="request__input" type="text">
+      </div>
+      <div class="request__item">
+        <label class="request__label">File (.ttf or .zip):</label>
+        <div class="request__download">
+          <label><span>Choose File</span>
+            <input type="file" id="input-file">
+          </label><span class="request__file-selected">no file selected</span>
+        </div>
+      </div>
+      <div class="request__btn">
+        <button class="btn small" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
           </div>
         </div>
       </div>
