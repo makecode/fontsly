@@ -3,8 +3,8 @@
 
 
 "@claviska/jquery-minicolors@^2.3.4":
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/@claviska/jquery-minicolors/-/jquery-minicolors-2.3.4.tgz#8f5c4af3e7d55396890288b357742711b368f75a"
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/@claviska/jquery-minicolors/-/jquery-minicolors-2.3.6.tgz#0f3dfe9baf11e93a3b1b1dcf2448177cf4c32e3e"
 
 abbrev@1:
   version "1.1.1"
